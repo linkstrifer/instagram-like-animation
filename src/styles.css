@@ -1,3 +1,18 @@
+@keyframes spring {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  90% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 body {
   font-family: sans-serif;
   margin: 0;
@@ -8,13 +23,18 @@ body {
   box-sizing: border-box;
   display: flex;
   flex: 1;
-  font-size: 3em;
+  font-size: 5em;
   height: 100vh;
   justify-content: center;
 }
 
 .container label {
   cursor: pointer;
+}
+
+.container .checked,
+.container .unchecked {
+  animation: spring 300ms;
 }
 
 .container .checked {
